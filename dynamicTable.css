@@ -1,0 +1,387 @@
+/*!* Positioning *!
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+z-index: 100;
+
+!* Box-model *!
+display: block;
+float: right;
+width: 100px;
+height: 100px;
+
+!* Typography *!
+font: normal 13px "Helvetica Neue", sans-serif;
+line-height: 1.5;
+color: #333;
+text-align: center;
+
+!* Visual *!
+background-color: #f5f5f5;
+border: 1px solid #e5e5e5;
+border-radius: 3px;
+
+!* Misc *!
+opacity: 1;*/
+
+/*-----------------------------------------------侧边导航---------------------------------------------*/
+
+ul,
+ul li {
+  list-style: none;
+  padding: 0;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+a {
+  cursor: pointer;
+  /*display: block;*/
+}
+
+/*删除、覆盖a li默认样式*/
+li,
+li a {
+  /*字体颜色*/
+  color: rgb(191, 203, 217);
+  font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Arial,sans-serif;
+  font-weight: 200;
+}
+
+/*删除、覆盖a默认悬浮样式*/
+/*a:link,
+a:visited,*/
+li a:focus,
+li a:hover {
+  color: rgb(191, 203, 217);
+}
+
+li i {
+  margin-right: 8px;
+}
+
+
+.side-menu {
+  /*float: left;*/
+  overflow: scroll;
+  position: fixed;
+  margin: 0;
+  width: 180px;
+  height: 940px;
+  cursor: pointer;
+  font-size: 14px;
+  /*导航颜色*/
+  background-color: rgb(48, 65, 86);
+}
+
+ul .glyphicon-menu-down {
+  float: right;
+  line-height: 50px;
+  font-size: 12px;
+  color: #8c8a8a;
+}
+
+.side-menu .menu {
+  /*position: relative;*/
+  /*width: 180px;*/
+  height: 56px;
+  line-height: 56px;
+  /*padding: 0 20px;*/
+  /* div给padding让div里面的a一直达不到180px的宽度 这里应该修改a给padding */
+}
+
+/* 这三个padding解决了当div 和li 在 a的外面时  要单独给a加padding才能让点击改变颜色时 宽度为导航宽度 */
+.menu > a {
+  padding: 0 20px;
+}
+
+.side-menu .parent-menu {
+  padding: 0 20px;
+}
+
+.sub-menu a {
+  padding: 0 40px;
+}
+
+/*导航一级悬浮颜色渐变*/
+/*选择直接后代，即一级li才变色，二级不变*/
+.menu:hover,
+.menu:focus {
+  background-color: rgb(38, 52, 69);
+  /* !!可以不加background，这样默认就是所有动画都有过渡效果 */
+  transition:background .7s;
+}
+
+
+.parent-menu {
+  /*position: relative;*/
+  clear: left;
+  width: 180px;
+}
+
+.parent-menu:hover,
+.parent-menu:focus {
+  background-color: rgb(38, 52, 69);
+  transition:background .7s;
+}
+
+.sub-menu {
+  /*二级菜单宽度撑开且清除左面*/
+  left: 0px;
+  /*position: relative;*/
+  display: none;
+  width: 180px;
+}
+
+
+
+.sub-menu li:hover,
+.sub-menu li:focus {
+  background-color: #001528;
+  transition:background .8s;
+}
+
+.sub-menu li {
+  height: 56px;
+  line-height: 56px;
+  /*clear: left;*/
+  /*padding: 0 45px 0 40px;*/
+  background-color: #1f2d3d;
+}
+
+.side-menu .active {
+  display: block;
+}
+
+.change-color {
+  color: rgb(64, 158, 255) !important;
+}
+
+.side-menu a{
+  display: block;
+  /*width: 180px;*/
+}
+
+/*--------------------------------主内容-------------------------------*/
+
+/*预留左侧导航*/
+.main-container {
+  margin-left: 180px;
+}
+/*--------------------------------左上标签-------------------------------*/
+
+.navbar {
+  /*float: left;*/
+  /*position: absolute;*/
+  height: 50px;
+  /*width: max-content;*/
+  line-height: 50px;
+  margin: 0;
+  border-bottom: 1px #eff1f0 solid;
+}
+
+.glyphicon-menu-hamburger {
+  /*width: 20px;*/
+  float: left;
+  height: 50px;
+  line-height: 50px;
+  font-size: 21px;
+  padding: 0 10px;
+}
+
+.link-tag {
+  float: left;
+  /*display: inline-block;*/
+  margin-left: 10px;
+}
+
+/*必须有a 要不定位不到文字*/
+.link-tag-text a {
+  color: rgb(48, 49, 51);
+  font-weight: 400;
+}
+
+.link-tag-text a:hover,
+.link-tag-text a:focus {
+  color: #409eff
+}
+
+.separator {
+  color: #c0c4cc;
+  font-weight: 400;
+  margin: 0 9px;
+}
+
+.nolink-tag {
+  /*float: left;*/
+  color: #97a8be;
+  cursor: text;
+  font-weight: 400;
+}
+
+.link-tag > span {
+  display: inline-block;
+  float: left;
+}
+
+/*--------------------------------右侧菜单-------------------------------*/
+
+.right-menu {
+  float: right;
+  /*clear: left;*/
+}
+
+.right-menu > div {
+  float: left;
+  margin: 0 8px;
+}
+
+/*.glyphicon-text-background {
+  border-radius: 2em;
+}*/
+
+.right-menu .right-icon {
+  font-size: 18px;
+  color: rgb(90, 94, 102);
+}
+
+.right-menu .color-picker {
+  height: 36px;
+  width: 36px;
+  vertical-align: middle;
+  line-height: 50px;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  padding: 4px;
+  margin: 7px 8px;
+}
+
+.color-picker .bg-color {
+  height: 26px;
+  width: 26px;
+  border: 1px solid #999;
+  border-radius: 2px;
+  text-align: center;
+  background-color: rgb(64, 158, 255);
+}
+
+.bg-color .glyphicon-menu-down {
+  /*height: 50px;*/
+  /*position: relative;
+  text-align: center;*/
+  /*line-height: 50px;*/
+  display: block;
+  top: 6px;
+  /*right: 6px;*/
+  /*z-index: 1;*/
+  color: #fff;
+  font-size: smaller;
+}
+
+.avatar-container img {
+  border-radius: 10px;
+  height: 40px;
+  width: 40px;
+}
+
+.avatar-container i {
+  font-size: 12px;
+  /*position: absolute;*/
+  /*right: -20px;*/
+  top: 12px;
+}
+
+/* -------tags-view-container ------ */
+
+.tags-view-container {
+  /*float: left;*/
+  /*margin-left: 180px;*/
+  /*width: auto;*/
+  height: 30px;
+  border-bottom: 1px #eff1f0 solid;
+}
+
+/*.tags-view-container .tags {
+  left: 0;
+  float: left;
+}*/
+/*
+.tags-view-container .extent {
+  float: right;
+}*/
+
+.tags span {
+  display: inline-block;
+}
+
+.tags .tags-bg {
+  float: left;
+  left: 0;
+  margin: 3px 15px 1px 15px;
+  padding: 0 8px;
+  width: 102px;
+  height: 24px;
+  background-color: #42b983;
+  border:1px solid #42b983;
+  color: #fff;
+}
+
+.tags .tags-dot {
+  /*font-size: 15px;*/
+  /*font-weight: 900;*/
+}
+
+.tags .tags-text {
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.tags .tags-close {
+  /*height: 10px;*/
+  margin-left: 4px;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 12px;
+  /*line-height: 26px;*/
+  font-weight: 100;
+}
+
+/* ------------------------表格--------------------- */
+
+.app-container {
+  padding: 20px;
+}
+
+.dynamic-table .type-description {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 17px;
+}
+
+.filter-container .checkbox {
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 50px;
+}
+
+.checkbox input {
+  cursor: pointer;
+  margin-left: 0!important;
+  margin-right: 0!important;
+  font-size: 15px;
+}
+
+.checkbox label {
+  /*padding: 0 20px;*/
+  /*margin-right: 20px;*/
+  color: #606266;
+  font-size: 14px;
+  font-weight: 400;
+  padding-left: 25px;
+}
+
