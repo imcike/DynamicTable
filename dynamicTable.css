@@ -385,3 +385,36 @@ ul .glyphicon-menu-down {
   padding-left: 25px;
 }
 
+.table-header thead {
+  color: #909399;
+  font-weight: 500;
+}
+
+.table .table-column {
+  border: 1px solid #ebeef5;
+  width: 400px;
+  height: 44px;
+  padding: 10px;
+}
+
+.table .fruit {
+  width: 180px!important;
+}
+
+/*.table .apple {
+  display: none;
+}
+
+.table .banana {
+  display: none;
+}
+
+.table .orange {
+  display: none;
+}*/
+
+
+.table-body .table-column {
+  color: #606266!important;
+  font-weight: 400!important;
+}

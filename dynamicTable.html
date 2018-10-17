@@ -271,26 +271,104 @@
         <div class="app-container">
           <span class="type-description">固定表头, 按照表头顺序排序</span>
           <div class="filter-container">
-            <div class="checkbox">
+            <div class="checkbox" id="check-apple" >
               <input type="checkbox" aria-hidden="true" id="fixed-apple"/>
               <label for="fixed-apple">apple</label>
             </div>
-            <div class="checkbox">
+            <div class="checkbox" id="check-banana">
               <input type="checkbox" aria-hidden="true" id="fixed-banana"/>
               <label for="fixed-banana">banana</label>
             </div>
-            <div class="checkbox">
+            <div class="checkbox" id="check-orange" >
               <input type="checkbox" aria-hidden="true" id="fixed-orange"/>
               <label for="fixed-orange">orange</label>
             </div>
           </div>
           <div class="table">
-            <div class="table-header"></div>
-            <div class="table-body"></div>
+            <div class="table-header-wrapper">
+              <table class="table-header">
+                <thead>
+                  <tr>
+                    <th class="table-column fruit">fruitName</th>
+                    <th class="table-column apple apple-show">apple</th>
+                    <th class="table-column banana">banana</th>
+                    <th class="table-column orange">orange</th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+            <div class="table-body-wrapper">
+              <table class="table-body">
+                <tbody>
+                <tr>
+                  <th class="table-column fruit">fruit-1</th>
+                  <th class="table-column apple apple-none">apple-10</th>
+                  <th class="table-column banana">banana-10</th>
+                  <th class="table-column orange">orange-10</th>
+                </tr>
+                <tr>
+                  <th class="table-column fruit">fruit-2</th>
+                  <th class="table-column apple apple-none">apple-20</th>
+                  <th class="table-column banana">banana-20</th>
+                  <th class="table-column orange">orange-20</th>
+                </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
       <div class="dynamic-table">
+        <div class="app-container">
+          <span class="type-description">不固定表头, 按照表头顺序排序</span>
+          <div class="filter-container">
+            <div class="checkbox"  >
+              <input type="checkbox" aria-hidden="true" id="unfixed-apple"/>
+              <label for="unfixed-apple">apple</label>
+            </div>
+            <div class="checkbox" >
+              <input type="checkbox" aria-hidden="true" id="unfixed-banana"/>
+              <label for="unfixed-banana">banana</label>
+            </div>
+            <div class="checkbox" >
+              <input type="checkbox" aria-hidden="true" id="unfixed-orange"/>
+              <label for="unfixed-orange">orange</label>
+            </div>
+          </div>
+          <div class="table">
+            <div class="table-header-wrapper">
+              <table class="table-header">
+                <thead>
+                <tr>
+                  <th class="table-column fruit">fruitName</th>
+                  <th class="table-column apple apple-show">apple</th>
+                  <th class="table-column banana">banana</th>
+                  <th class="table-column orange">orange</th>
+                </tr>
+                </thead>
+              </table>
+            </div>
+            <div class="table-body-wrapper">
+              <table class="table-body">
+                <tbody>
+                <tr>
+                  <th class="table-column fruit">fruit-1</th>
+                  <th class="table-column apple apple-none">apple-10</th>
+                  <th class="table-column banana">banana-10</th>
+                  <th class="table-column orange">orange-10</th>
+                </tr>
+                <tr>
+                  <th class="table-column fruit">fruit-2</th>
+                  <th class="table-column apple apple-none">apple-20</th>
+                  <th class="table-column banana">banana-20</th>
+                  <th class="table-column orange">orange-20</th>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
 
       </div>
     </div>

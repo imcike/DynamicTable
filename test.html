@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>点击一个按钮隐藏和显示div</title>
+  <style type="text/css">
+    #thediv{
+      width:200px;
+      height:50px;
+      background:#ccc;
+    }
+  </style>
+  <script type="text/javascript">
+    window.onload=function(){
+      var obt=document.getElementById("bt");
+      var odiv=document.getElementById("thediv");
+      obt.onclick=function(){
+        if(odiv.style.display=="none"){
+          odiv.style.display="block";
+          obt.value="隐藏模块";
+        }
+        else{
+          odiv.style.display="none";
+          obt.value="显示模块";
+        }
+      }
+    }
+  </script>
+<body>
+<input type="button" id="bt" value="显示模块"/>
+<div id="thediv" style="display:none"></div>
+</body>
+</html>
